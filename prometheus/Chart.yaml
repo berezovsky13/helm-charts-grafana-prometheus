@@ -1,0 +1,11 @@
+apiVersion: v1
+description: My helm chart for Prometheus
+home: https://github.com/berezovsky13/helm-charts
+maintainers:
+- email: danibiri3@gmail.com
+  name: Prometheus
+name: prometheus
+version: latest
+appVersion: latest
+sources:
+  - https://github.com/berezovsky13/helm-charts

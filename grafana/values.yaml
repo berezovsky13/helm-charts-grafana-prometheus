@@ -1,5 +1,5 @@
 ---
-clusterName: "elasticsearch"
+clusterName: "grafana"
 nodeGroup: "master"
 
 # The service that non master groups will try to connect to when joining the cluster
@@ -13,8 +13,8 @@ roles:
   ingest: "true"
   data: "true"
 
-replicas: 3
-minimumMasterNodes: 2
+replicas: 1
+minimumMasterNodes: 1
 
 esMajorVersion: ""
 
@@ -50,8 +50,8 @@ secretMounts: []
 #    path: /usr/share/elasticsearch/config/certs
 #    defaultMode: 0755
 
-image: "docker.elastic.co/elasticsearch/elasticsearch"
-imageTag: "8.0.0-SNAPSHOT"
+image: "grafana/grafana"
+imageTag: "latest"
 imagePullPolicy: "IfNotPresent"
 
 podAnnotations: {}
@@ -169,8 +169,8 @@ podManagementPolicy: "Parallel"
 enableServiceLinks: true
 
 protocol: http
-httpPort: 9200
-transportPort: 9300
+httpPort: 9201
+transportPort: 9301
 
 service:
   labels: {}
